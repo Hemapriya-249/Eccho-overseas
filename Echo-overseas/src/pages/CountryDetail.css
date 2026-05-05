@@ -1,0 +1,66 @@
+.country-hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  padding-top: var(--header-height);
+}
+
+.country-hero h1 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.country-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  background: #F0F9F7;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.cta-box {
+  background: var(--primary);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.cta-box h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.input-mini {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-mini input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}

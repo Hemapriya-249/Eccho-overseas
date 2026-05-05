@@ -1,0 +1,115 @@
+.services-page {
+  padding-top: var(--header-height);
+}
+
+.services-hero {
+  background: linear-gradient(rgba(13, 139, 107, 0.8), rgba(26, 26, 26, 0.8)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+}
+
+.services-hero .section-title {
+  color: white;
+}
+
+.services-hero .section-title::after {
+  background-color: #FFFFFF;
+}
+
+.lead {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 20px auto 0;
+  opacity: 0.9;
+}
+
+.services-full-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.service-detail-card {
+  display: flex;
+  gap: 25px;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border: 1px solid #f1f5f9;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.service-link {
+  display: block;
+}
+
+.service-detail-card.service-link:hover .service-detail-icon {
+  background: var(--primary);
+  color: white;
+}
+
+.service-detail-icon {
+  width: 70px;
+  height: 70px;
+  background: #F0F9F7;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.service-detail-card.single {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-detail-card:hover .service-detail-icon {
+  background: var(--primary);
+  color: white;
+}
+
+.service-detail-content h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.service-detail-content p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.services-cta {
+  background-color: #F0F9F7;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .services-full-grid {
+    grid-template-columns: 1fr;
+  }
+}
