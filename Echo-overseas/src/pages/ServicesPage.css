@@ -29,6 +29,89 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  margin-top: 60px;
+}
+
+.services-dropdown-wrapper {
+  margin-bottom: 80px;
+}
+
+.services-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.services-dropdown label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.dropdown-container {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.services-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--dark);
+  background-color: white;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%230d8b6b' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 35px;
+}
+
+.services-select:hover {
+  border-color: #0d6b4e;
+}
+
+.services-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 139, 107, 0.1);
+}
+
+.service-detail-view {
+  margin-bottom: 40px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-detail-view .service-detail-card {
+  background: linear-gradient(135deg, #F0F9F7 0%, white 100%);
+  border: 2px solid var(--primary);
+  cursor: pointer;
+}
+
+.all-services-title {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.service-card-item {
+  cursor: pointer;
 }
 
 .service-detail-card {

@@ -22,7 +22,7 @@ const Header = () => {
         <div className="container flex-between">
           <div className="top-info">
             <a href="tel:+919658393393"><Phone size={14} /> +91 96583 93393</a>
-            <a href="mailto:info@ecchouk.co.uk"><Mail size={14} /> info@ecchouk.co.uk</a>
+            <a href="mailto:eccho.kphb@gmail.com"><Mail size={14} /> eccho.kphb@gmail.com</a>
           </div>
           <div className="top-social">
             <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
@@ -38,17 +38,24 @@ const Header = () => {
       <nav className="main-nav">
         <div className="header-container">
           <Link to="/" className="logo">
-            <img src="/logo.png" alt="Echo Overseas" />
+            <img src="/logo.png" alt="Eccho Overseas" />
           </Link>
 
           <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+            <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
             <li><Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link></li>
             
             <li className="dropdown">
               <Link to="/services">Services <ChevronDown size={14} /></Link>
               <ul className="dropdown-menu">
-                <li><Link to="/services/test-prep" onClick={() => setIsMobileMenuOpen(false)}>Test Prep</Link></li>
-                <li><Link to="/services/admissions" onClick={() => setIsMobileMenuOpen(false)}>Admissions</Link></li>
+                <li><Link to="/services/free-counselling" onClick={() => setIsMobileMenuOpen(false)}>Free Counselling</Link></li>
+                <li><Link to="/services/test-prep" onClick={() => setIsMobileMenuOpen(false)}>Test Preparation</Link></li>
+                <li><Link to="/services/university-selection" onClick={() => setIsMobileMenuOpen(false)}>University Selection</Link></li>
+                <li><Link to="/services/admissions" onClick={() => setIsMobileMenuOpen(false)}>Admission Counselling</Link></li>
+                <li><Link to="/services/visa-guidance" onClick={() => setIsMobileMenuOpen(false)}>Visa Guidance</Link></li>
+                <li><Link to="/services/post-landing-support" onClick={() => setIsMobileMenuOpen(false)}>Pre-Departure Briefing</Link></li>
+                <li><Link to="/services/scholarship-guidance" onClick={() => setIsMobileMenuOpen(false)}>Scholarship Assistance</Link></li>
+                <li><Link to="/services/loan-assistance" onClick={() => setIsMobileMenuOpen(false)}>Loan Assistance</Link></li>
               </ul>
             </li>
 

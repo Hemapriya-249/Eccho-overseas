@@ -10,7 +10,7 @@ const Hero = () => {
           <span className="hero-subtitle">Transforming Dreams Into Reality</span>
           <h1>Expert Guidance for Your <span>Global Education</span> Journey</h1>
           <p>
-            Join thousands of successful students who have achieved their dreams of studying in top global universities with Echo Overseas.
+            Join thousands of successful students who have achieved their dreams of studying in top global universities with Eccho Overseas.
           </p>
           
           <div className="hero-features">

@@ -17,27 +17,11 @@ const About = () => {
             <div style={{ flex: '1', minWidth: '300px' }}>
               <h2>Our Story</h2>
               <p>
-                Echo Overseas started with a simple mission: to bridge the gap between ambitious students and world-class education. Over the years, we have grown into one of India's leading overseas education consultancies, with a presence in 21+ cities.
+                Eccho Overseas started with a simple mission: to bridge the gap between ambitious students and world-class education. Over the years, we have grown into one of India's leading overseas education consultancies, with a presence in 21+ cities.
               </p>
               <p>
                 Our team of expert counsellors has helped over 25,000 students navigate the complexities of university applications, visa processes, and cultural transitions.
               </p>
-            </div>
-            <div style={{ flex: '1', minWidth: '300px' }}>
-              <div className="stats-box">
-                <div className="stat">
-                  <h3>15+</h3>
-                  <p>Years of Experience</p>
-                </div>
-                <div className="stat">
-                  <h3>21+</h3>
-                  <p>Branches</p>
-                </div>
-                <div className="stat">
-                  <h3>500+</h3>
-                  <p>University Partners</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
