@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import './Contact.css';
+import contactImg from '../assets/contact.jpg';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -94,7 +95,7 @@ const Contact = () => {
 
           {/* Image Section */}
           <div className="contact-image-section">
-            <img src="https://images.unsplash.com/photo-1460925895917-aeb19be489c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Contact" />
+            <img src={contactImg} alt="Contact" />
           </div>
         </div>
       </div>

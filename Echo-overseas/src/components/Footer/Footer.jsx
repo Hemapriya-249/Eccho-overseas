@@ -16,11 +16,11 @@ const Footer = () => {
             {/* ABOUT US */}
             <div className="footer-col">
               <Link to="/" className="footer-logo-link">
-                <img src="/logo.png" alt="Echo Overseas" className="footer-logo-img" />
+                <img src="/logo.png" alt="Eccho Overseas" className="footer-logo-img" />
               </Link>
               <h3>ABOUT US</h3>
               <p className="footer-desc">
-                Echo Overseas is an international consultancy offering assistance to students wishing to pursue further education overseas and career advise that enables people to make choices for advancing a successful career.
+                Eccho Overseas is an international consultancy offering assistance to students wishing to pursue further education overseas and career advise that enables people to make choices for advancing a successful career.
               </p>
               <div className="contact-info">
                 <div className="contact-item">
@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
                 <div className="contact-item">
                   <Mail size={16} />
-                  <span>info@ecchouk.co.uk</span>
+                  <span>eccho.kphb@gmail.com</span>
                 </div>
                 <div className="contact-item">
                   <Phone size={16} />
@@ -72,7 +72,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container flex-between">
           <div className="copyright">
-            Copyright © Echo Overseas . All Right Reserved.
+            Copyright © Eccho Overseas . All Right Reserved.
           </div>
           
           <div className="bottom-links">
