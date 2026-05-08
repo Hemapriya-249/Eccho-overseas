@@ -1,7 +1,20 @@
 import React from 'react';
+import { MapPin, User } from 'lucide-react';
 import './About.css';
+import contactImg from '../assets/contact.jpg';
+import Destinations from '../components/Home/Destinations';
 
 const About = () => {
+  const branches = [
+    { city: 'Hyderabad (Main Office)', address: 'KPHB, Hyderabad' },
+    { city: 'Bangalore', address: 'Koramangala, Bangalore' },
+    { city: 'Delhi', address: 'Connaught Place, Delhi' },
+    { city: 'Mumbai', address: 'Bandra, Mumbai' },
+    { city: 'Pune', address: 'Hinjewadi, Pune' },
+    { city: 'Chennai', address: 'Nungambakkam, Chennai' },
+    { city: 'Vijayawada', address: 'Dwarakanagar, Vijayawada' },
+    { city: 'Kadapa', address: 'Railway Station Road, Kadapa' }
+  ];
   return (
     <div className="about-page">
       <section className="about-hero section-padding">
@@ -24,8 +37,32 @@ const About = () => {
               </p>
             </div>
           </div>
+          
+          <div className="about-branches-section" style={{ marginTop: '60px' }}>
+            <h2 style={{ marginBottom: '30px' }}>Our Branches</h2>
+            <div className="branches-grid">
+              {branches.map((branch, index) => (
+                <div key={index} className="branch-card">
+                  <div className="branch-card-header">
+                    <User size={24} className="branch-icon" />
+                  </div>
+                  <div className="branch-content">
+                    <h3>{branch.city}</h3>
+                    <div className="branch-info">
+                      <div className="info-item">
+                        <MapPin size={16} />
+                        <span>{branch.address}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
+
+      <Destinations />
 
       <section className="vision-mission section-padding" style={{ backgroundColor: 'var(--primary)', color: 'white' }}>
         <div className="container">

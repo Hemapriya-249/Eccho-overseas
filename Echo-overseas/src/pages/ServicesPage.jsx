@@ -128,7 +128,7 @@ const ServicesPage = () => {
         <div className="container text-center">
           <h2>Need Personalized Advice?</h2>
           <p>Book a free session with our counsellors today.</p>
-          <a href="/counselling" className="btn btn-secondary" style={{ marginTop: '20px' }}>Book Free Counselling</a>
+          <a href="/contact" className="btn btn-secondary" style={{ marginTop: '20px' }}>Book Free Counselling</a>
         </div>
       </section>
     </div>
