@@ -18,7 +18,7 @@ const Home = () => {
           <p style={{ marginBottom: '30px', fontSize: '1.1rem', color: '#64748b' }}>
             Book a free consultation session with our expert counsellors today.
           </p>
-          <a href="/counselling" className="btn btn-secondary">Book Free Counselling Now</a>
+          <a href="/contact" className="btn btn-secondary">Book Free Counselling Now</a>
         </div>
       </section>
 

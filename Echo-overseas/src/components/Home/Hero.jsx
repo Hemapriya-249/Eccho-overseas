@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
 
           <div className="hero-btns">
-            <a href="/counselling" className="btn btn-secondary">Get Started Now <ArrowRight size={18} /></a>
+            <a href="/contact" className="btn btn-secondary">Get Started Now <ArrowRight size={18} /></a>
             <a href="/about" className="btn btn-outline">Explore More</a>
           </div>
         </div>

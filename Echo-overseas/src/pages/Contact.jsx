@@ -18,10 +18,33 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    
+    
+    const webhookUrl = 'https://proconscription-rifely-tiffaney.ngrok-free.dev/webhook/Eccho-overseas-storage';
+    
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        console.log('Form submitted successfully:', formData);
+        alert('Thank you! Your message has been sent successfully.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        console.error('Failed to submit form');
+        alert('Oops! Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Oops! There was a network error. Please try again later.');
+    }
   };
 
   return (

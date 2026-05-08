@@ -54,7 +54,7 @@ const CountryDetail = () => {
               <p style={{ marginTop: '30px' }}>
                 We provide comprehensive assistance for {data.name} including university shortlisting, application processing, scholarship guidance, and visa interview preparation.
               </p>
-              <Link to="/counselling" className="btn btn-primary" style={{ marginTop: '30px' }}>Get Free Consultation</Link>
+              <Link to="/contact" className="btn btn-primary" style={{ marginTop: '30px' }}>Get Free Consultation</Link>
             </div>
             
             <div className="sidebar" style={{ flex: '0.8', minWidth: '300px' }}>
