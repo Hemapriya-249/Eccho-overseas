@@ -105,8 +105,8 @@ const Home = () => {
       {/* Why Echo Overseas */}
       <section className="why-us section-padding">
         <div className="container">
-          <div className="flex-between" style={{ gap: '60px', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1', minWidth: '300px' }}>
+          <div className="flex-between" style={{ gap: 'clamp(30px, 5vw, 60px)', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1', minWidth: 'min(100%, 300px)' }}>
               <span className="subtitle">Why Choose Us</span>
               <h2 className="section-title">Your Trusted Partner in Global Education</h2>
               <p style={{ marginBottom: '20px' }}>
@@ -127,7 +127,7 @@ const Home = () => {
                 </li>
               </ul>
             </div>
-            <div style={{ flex: '1', minWidth: '300px' }}>
+            <div style={{ flex: '1', minWidth: 'min(100%, 300px)' }}>
                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" alt="Consultation" style={{ width: '100%', borderRadius: '20px', boxShadow: 'var(--shadow-lg)' }} />
             </div>
           </div>

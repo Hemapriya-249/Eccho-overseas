@@ -217,3 +217,22 @@
     gap: 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 60px 0;
+  }
+  
+  .stats-box {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  
+  .lead {
+    font-size: 1.2rem;
+  }
+  
+  .vision-card, .mission-card {
+    padding: 25px;
+  }
+}
