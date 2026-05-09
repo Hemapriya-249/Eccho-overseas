@@ -6,6 +6,7 @@ import './Header.css';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +18,12 @@ const Header = () => {
 
   const handleNavClick = () => {
     setIsMobileMenuOpen(false);
+    setOpenDropdown(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const toggleDropdown = (dropdown) => {
+    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
 
   return (
@@ -44,8 +50,13 @@ const Header = () => {
             <li><Link to="/" onClick={handleNavClick}>Home</Link></li>
             <li><Link to="/about" onClick={handleNavClick}>About</Link></li>
             
-            <li className="dropdown">
-              <Link to="/services">Services <ChevronDown size={14} /></Link>
+            <li className={`dropdown ${openDropdown === 'services' ? 'mobile-open' : ''}`}>
+              <div className="nav-item-wrapper">
+                <Link to="/services" onClick={handleNavClick}>Services</Link>
+                <button className="dropdown-toggle" onClick={() => toggleDropdown('services')}>
+                  <ChevronDown size={14} className={`chevron-icon ${openDropdown === 'services' ? 'open' : ''}`} />
+                </button>
+              </div>
               <ul className="dropdown-menu">
                 <li><Link to="/services/free-counselling" onClick={handleNavClick}>Free Counselling</Link></li>
                 <li><Link to="/services/test-prep" onClick={handleNavClick}>Test Preparation</Link></li>
@@ -58,8 +69,13 @@ const Header = () => {
               </ul>
             </li>
 
-            <li className="dropdown mega-dropdown">
-              <Link to="/study-in" onClick={handleNavClick}>Study In <ChevronDown size={14} /></Link>
+            <li className={`dropdown mega-dropdown ${openDropdown === 'study-in' ? 'mobile-open' : ''}`}>
+              <div className="nav-item-wrapper">
+                <Link to="/study-in" onClick={handleNavClick}>Study In</Link>
+                <button className="dropdown-toggle" onClick={() => toggleDropdown('study-in')}>
+                  <ChevronDown size={14} className={`chevron-icon ${openDropdown === 'study-in' ? 'open' : ''}`} />
+                </button>
+              </div>
               <div className="mega-menu">
                 <div className="mega-grid">
                   <Link to="/study-in/usa" onClick={handleNavClick}>USA</Link>
