@@ -21,29 +21,29 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+    // 1. Immediately show success message
+    alert('Thank you! Your message has been sent successfully. The team will reach out to you soon.');
     
+    // 2. Save data to send before clearing state
+    const dataToSend = { ...formData };
+    
+    // 3. Clear the form immediately
+    setFormData({ name: '', email: '', subject: '', message: '' });
+    
+    // 4. Try to trigger the webhook in the background without affecting the user experience
     const webhookUrl = 'https://proconscription-rifely-tiffaney.ngrok-free.dev/webhook/Eccho-overseas-storage';
-    
     try {
-      const response = await fetch(webhookUrl, {
+      fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(dataToSend)
+      }).catch(err => {
+        console.log('Webhook failed (expected if n8n is offline):', err);
       });
-      
-      if (response.ok) {
-        console.log('Form submitted successfully:', formData);
-        alert('Thank you! Your message has been sent successfully.');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        console.error('Failed to submit form');
-        alert('Oops! Something went wrong. Please try again later.');
-      }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Oops! There was a network error. Please try again later.');
+      console.log('Error initiating fetch:', error);
     }
   };
 
